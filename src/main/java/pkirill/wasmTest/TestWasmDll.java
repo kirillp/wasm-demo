@@ -21,6 +21,10 @@ public class TestWasmDll {
   }
 
   public interface Exports extends WebAssembly.MemoryContainer {
-    @JSMethod int callToCpp();
+    int callToCpp();
+    int getC8String();
+    int getC16String();
+    int getCFloatArray8();
+
   }
 }

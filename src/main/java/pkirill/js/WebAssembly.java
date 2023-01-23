@@ -17,6 +17,8 @@ public class WebAssembly {
     default int getByteLength() {
       return buffer().getByteLength();
     }
+
+    default JsMemoryAccess memoryAccess() { return new JsMemoryAccess(buffer()); }
   }
 
   public interface MemoryContainer extends JSObject {
